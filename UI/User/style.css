@@ -1,0 +1,713 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+*{
+  font-family: Lexend, serif;
+  font-size: 16px;
+}
+
+body{
+  margin: 0;
+  max-height: 1200px;
+  overflow: hidden;
+}
+
+select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  /*background-color: #f9f9f9;*/
+  width: 150px;
+  cursor: pointer;
+}
+
+/* Style for option elements */
+option {
+  font-size: 16px;
+  color: #333;
+  padding: 10px;
+  /*background-color: #f9f9f9;*/
+}
+
+/* Optional: Change the background color when hovering over options */
+select:hover {
+  filter: brightness(90%);
+}
+
+option:hover {
+  filter: brightness(90%);
+}
+
+button:hover {
+  cursor: pointer;
+  filter: brightness(90%);
+}
+
+/* Hiệu ứng khi nhấn */
+button:active {
+  transform: scale(0.95);
+}
+
+.content{
+  border-right: 2px solid #646B74;
+  width: 1538px;
+  height: 1200px;
+}
+
+header{
+  border: 2px solid #646B74;
+  border-top: 0;
+  width: 1536px;
+  height: 50px;
+}
+
+#header{
+  height: 50px;
+  width: 100vw;
+  min-width: 780px;
+
+  display: inline-flex;            /* Use Flexbox */
+  justify-content: space-between;
+  align-items: center;      /* Căn giữa theo chiều dọc */
+}
+
+#headerNameBox{
+  padding: 6px 10px;
+  border-right: 2px solid #646B74;
+  width: fit-content;
+  text-align: center;
+  display: inline-block;
+}
+#headerName1, #headerName2{
+  font-size: 15px;
+  text-align: center;
+}
+#headerName1{
+  color: #039EFF;
+}
+
+#headerName2{
+  color: #2249C6;
+}
+
+.headerFunc1, .headerFunc2{
+  font-size: 15px;
+  width: fit-content;
+  text-align: center;
+  display: inline-block;
+  border: 1.5px solid #3E63DD;
+  padding: 2px 3px;
+  border-radius: 8px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.headerFunc1{
+  color: #3E63DD;
+  background: white;
+}
+
+.headerFunc2{
+  color: white;
+  background: #3E63DD;
+}
+
+#headerFuncBox{
+  width: fit-content;
+  text-align: center;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+aside{
+  position: absolute;
+  display: inline-block;
+  width: 323.5px;
+  height: 1200px;
+  border-right: 2px solid #646B74;
+  border-left: 2px solid #646B74;
+  align-items: center;      /* Căn giữa theo chiều dọc */
+}
+
+.sideBarIcon{
+  margin: 0 15px;
+}
+
+.sideBar{
+  padding: 10px 0;
+
+}
+
+.sideBar:hover, #firstSideBar:hover{
+  background: #646B74;
+}
+
+#firstSideBar{
+  /*padding-top: 20px;*/
+  background: #646B74;
+}
+
+.statisticBox{
+  width: fit-content;
+  display: inline-flex;
+  position: absolute;
+  top: 78px;
+  left: 365px;
+}
+
+.statistic1{
+  position: relative;
+  width: 205px;
+  height: 95px;
+  text-align: center;
+  display: inline-block;
+  border: 1.5px solid #646B74;
+  padding: 20px 0;
+  border-radius: 8px;
+  margin-right: 40px;
+  margin-bottom: 30px;
+
+}
+
+.statisticNumber{
+  position: absolute;
+  left: 18px;
+  top: 60px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.commandBox{
+  /*overflow: auto;*/
+  position: absolute;
+  display: inline-flex;
+  left: 1109px;
+  top: 78px;
+  width: 390px;
+  height: 230px;
+  border: 2px solid #646B74;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+
+/*.commandBox2{  !* without content*!*/
+/*  overflow: auto;*/
+/*  position: absolute;*/
+/*  display: inline-flex;*/
+/*  left: -2px;*/
+/*  top: -2px;*/
+/*  width: 390px;*/
+/*  height: 230px;*/
+
+/*}*/
+
+
+.commandBox2{ /* with content */
+  overflow: auto;
+  position: absolute;
+  display: inline-flex;
+  left: -2px;
+  top: 54px;
+  width: 390px;
+  height: 174px;
+
+}
+
+
+.commandTitle{
+  position: relative;
+  left: 20px;
+  top: 18px;
+  height: fit-content;
+  padding-bottom: 18px;
+  /*padding-top: 18px;*/
+  /*padding-left: 20px;*/
+}
+
+/*.commandInformationBox{ !* without content*!*/
+/*  position: absolute;*/
+/*  top: 50%;*/
+/*  left: 50%;*/
+/*  transform: translate(-50%, -50%);*/
+/*  text-align: center;*/
+/*}*/
+
+.commandInformationBox{ /* with content*/
+   position: absolute;
+   top: 0;
+   left: 22px;
+   text-align: left;
+
+ }
+
+.noMargin{
+  margin-left: 6px !important;
+}
+
+.smallSize{
+  font-size: 13px!important;
+}
+
+.CommandTagBox{
+  align-items: center;      /* Căn giữa theo chiều dọc */
+  position: relative;
+  display: inline-flex;
+  /*top: 90px;*/
+  left: 0;
+  width: 120%;
+  height: 40px;
+  margin-bottom: 15px;
+  .withoutColor, .withColor{
+    width: 88px;
+  }
+}
+
+
+.commandTitleContent{
+  color: #1E4DC1;
+}
+
+.recentCommandBox{
+  position: relative;
+  display: inline-block;
+  top: 194px;
+  right: -365px;
+  width: 700px;
+  height: 600px;
+  border: 2px solid #646B74;
+  border-radius: 8px;
+  margin-right: 40px;
+  margin-bottom: 40px;
+}
+
+.recentCommandBox2{
+  position: relative;
+  display: inline-block;
+  overflow: auto;
+  top: 85px;
+  right: 2px;
+  width: 700px;
+  height: 513px;
+}
+
+.recentCommandTagBox{
+  align-items: center;      /* Căn giữa theo chiều dọc */
+  position: relative;
+  display: inline-flex;
+  /*top: 90px;*/
+  left: 22px;
+  width: 90%;
+  height: 40px;
+  margin-bottom: 15px;
+}
+
+
+.recentCommandTitle{
+  position: absolute;
+  font-size: 17px;
+  left: 20px;
+  top: 33px;
+  box-sizing: border-box;
+  width: 200px;
+  height: fit-content;
+  margin-bottom: 33px;
+
+}
+
+.recentCommandTagBoxName{
+  color: black;
+}
+
+.recentCommandTagBoxDate{
+  color: #646B74;
+}
+
+.recentCommandTagBoxInfo{
+  margin-left: 22px;
+}
+
+.tagRoundBox{
+  font-size: 15px;
+  text-align: center;
+  border-radius: 8px;
+  margin-left: 22px;
+  padding: 1px 5px;
+}
+
+
+.withoutColor{
+  width: 101px;
+  background: #D9D9D9;
+}
+
+.withColor{
+  text-align: center;
+  width: 101px;
+  background: #F05F62;
+}
+
+.twoSided{
+  width: fit-content;
+  background: #26C7E3;
+}
+
+.oneSided{
+  width: fit-content;
+  background: #F37A4E;
+}
+
+.printerBox{
+  /*overflow: auto;      !* Đảm bảo nội dung không tràn ra ngoài *!*/
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  position: relative;    /* Giữ phần tử cố định trong phần tử cha */
+  left: 1109px;
+  top: -348px;
+  border-radius: 8px;
+  width: 390px;
+  height: 370px;
+  border: 2px solid #646B74;
+}
+
+.printerBox2{
+  overflow: auto;      /* Đảm bảo nội dung không tràn ra ngoài */
+  display: inline-block;
+  position: relative;    /* Giữ phần tử cố định trong phần tử cha */
+  left: -2px;
+  top: 54px;
+  width: 390px;
+  height: 314px;
+}
+
+.printerBoxTitle{
+  position: absolute;
+  left: 20px;
+  top: 18px;
+  padding-bottom: 18px;
+  box-sizing: border-box;
+  height: fit-content;
+  width: fit-content;
+}
+
+.printerTagBox{
+  align-items: center;      /* Căn giữa theo chiều dọc */
+  position: relative;
+  display: inline-flex;
+  top: 0;
+  left: 0;
+  right: 100px;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 15px;
+
+}
+
+.printerMargin{
+  margin-left: 5px;
+}
+
+
+
+
+.location{
+  padding: 0 5px;
+  background: #EFF7FF;
+  color: #3E63DD;
+  border: 1.5px solid #646B74;
+}
+
+.buttonSideBar{
+  display: none;
+}
+
+.functionOn{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: #A59A9A;
+  opacity: 0.3;
+  align-items: center;
+}
+
+.paymentBox{
+  position: relative;
+  top: -1251px;
+  left: 0;
+  /*transform: translate(-50%, -50%);*/
+  z-index: 2;
+  color: black;
+  background: white;
+  width: 500px; /* 1036 */
+  height: 500px; /* 1536*/
+  margin: 178.5px 550px;
+  border-radius: 12px;
+
+}
+
+.paymentTable{
+
+  top: 40%;
+  left: 50%;
+  transform: translate(-40%, 40%);
+  position: relative;
+}
+
+.paymentTitle{
+  padding-right: 70px;
+  width: 200px;
+}
+
+.paymentTablePadding{
+  padding-bottom: 40px;
+}
+
+.logoStyle{
+  display: inline-flex;
+  position: relative;
+  top: 100px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: auto;
+}
+
+.paymentWidth{
+  width: 118px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  margin-left: 10px;
+}
+
+.paymentButton{
+  display: inline-flex;
+  position: relative;
+  top: 100px;
+  left: 300px;
+  width: fit-content;
+}
+
+.paymentButton1{
+  box-sizing: content-box;
+  width: 70px;
+  /*padding: 10px;*/
+  padding: 0;
+  height: 24px;
+  margin-left: 10px;
+  border-radius: 8px;
+}
+
+#paymentControl{
+  display: none;
+}
+
+#balanceControl{
+  display: none;
+}
+
+form{
+  display: inline-block;
+}
+
+.uploadModify{
+  width: 700px; /* 1036 */
+  height: 500px; /* 1536*/
+  margin: 168px 518px;
+
+}
+
+.uploadTitle{
+  position: relative;
+  top: 30px;
+  left: 30px;
+}
+
+.uploadTitle1{
+  font-weight: bold;
+  padding-bottom: 1px;
+}
+
+.uploadTitle2{
+  color: #646B74;
+}
+
+#uploadFile{
+  display: none;
+}
+
+.labelForUploadFile:hover {
+  cursor: pointer;
+  filter: brightness(90%);
+}
+
+.labelForUploadFile1{
+  position: relative;
+  width: 550px;
+  height: 220px;
+  border: 2px dotted #646B74;
+  border-radius: 8px;
+  margin-top: 10px;
+  top: 0;
+  left: 0;
+  /*transform: translate(-35%, -50%);*/
+}
+
+.contentBox{
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+.uploadCoverBox{
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 30%);
+
+}
+
+.contentBox1{
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.uploadLineControl{
+  border-bottom: 2px solid black;
+  width: 370px;
+}
+
+.uploadCoverBoxContent{
+  display: inline-flex;
+  padding-left: 20px;
+  padding-bottom: 4px;
+}
+
+.positionUploadButton{
+  top: 39px;
+  left: 387px;
+}
+
+#uploadControl{
+  display: none;
+}
+
+.printerCoverBox{
+  overflow: auto;
+  display: inline-block;
+  position: relative;
+  width: 650px;
+  height: 350px;
+  /*border: 2px solid #646B74;*/
+  top: -20px;
+  left: 8px;
+  transform: translate(4%,20%);
+  /*border-radius: 2px;*/
+}
+
+.printerChooseBox{
+  cursor: pointer;
+  position: relative;
+  display: inline-flex;
+  top: 5px;
+  left: 0;
+  width: 194px;
+  height: 158px;
+  border: 2px solid #646B74;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttonTestPdf{
+  color: #1E4DC1;
+  border: none;
+  background: white;
+  padding: 0;
+}
+
+.buttonTestPdf:hover{
+  filter: none;
+}
+
+.printerContent{
+  display: inline-block;
+  position: absolute;
+  width: fit-content;
+  text-align: center;
+}
+
+.itemPrinter{
+  margin-bottom: 10px;
+}
+
+#printerControl{
+  display: none;
+}
+
+.positionPrinterButton{
+  display: inline-block;
+  position: absolute;
+  top: 457px;
+  left: 588px;
+}
+
+.propertyModify{
+  height: 800px; /* 842 */
+  width: 700px; /* 1520*/
+  margin: 21px 450px;
+}
+
+.propertyCoverBox{
+
+}
+
+.changePrinterBox{
+  position: absolute;
+  top: -70px;
+  left: 45px;
+  width: 600px;
+  border: 2px solid #646B74;
+  border-radius: 15px;
+  display: inline-flex;            /* Use Flexbox */
+  justify-content: space-between;
+  align-items: center;      /* Căn giữa theo chiều dọc */
+  margin-bottom: 20px;
+}
+
+.propertyBox{
+  position: relative;
+  top: 135px;
+  left: 5px;
+  display: inline-flex;
+}
+
+ul{
+  list-style-type: none;
+}
+
+li{
+  padding-bottom: 10px;
+  padding-right: 12px;
+}
+
+input[type="radio"] {
+  transform: scale(1.5); /* Phóng to nút radio lên 1.5 lần */
+  vertical-align: middle; /* Căn chỉnh với văn bản */
+  margin-right: 10px;
+}
+
+.positionSelectButton{
+  top: 140px;
+  left: 480px;
+}
+#propertyControl{
+  display: none;
+}

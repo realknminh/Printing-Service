@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="style.css">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+  <script src="../User_BE/PurchasePaper_AddBalance.js"></script>
 </head>
 
 <body>
@@ -42,7 +42,7 @@
     <div class="statisticBox">
     <span class="statistic1">Current Balance <i class="fa-solid fa-dollar-sign" style="padding-left: 31px"></i>
       <br>
-      <span class="statisticNumber">2024</span>
+      <span class="statisticNumber currentBalance">100</span>
     </span>
       <span class="statistic1">Total Commands <i class="fa-solid fa-terminal" style="padding-left: 19px"></i>
       <br>
@@ -232,28 +232,6 @@
           </div>
 
           <div class="tagRoundBox withoutColor">Without Color</div>
-          <div class="tagRoundBox oneSided">1 Sided</div>
-
-        </div>
-
-        <div class="recentCommandTagBox">
-          <div>
-            <i class="fa-regular fa-file-lines" style="font-size: 20px;"></i>
-          </div>
-          <div class="recentCommandTagBoxInfo">
-            <span class="recentCommandTagBoxName">Document_for_software.pdf</span>
-            <br>
-            <span class="recentCommandTagBoxDate">24 pages - 12PM 18/10/2024</span>
-          </div>
-          <div class="recentCommandTagBoxInfo"> - </div>
-
-          <div class="recentCommandTagBoxInfo">
-            <span class="recentCommandTagBoxName">Printer A</span>
-            <br>
-            <span class="recentCommandTagBoxDate">304 - A4</span>
-          </div>
-
-          <div class="tagRoundBox withoutColor">Without Color</div>
           <div class="tagRoundBox twoSided">2 Sided</div>
 
         </div>
@@ -341,7 +319,7 @@
             <span class="recentCommandTagBoxDate">304 - A4</span>
           </div>
 
-          <div class="tagRoundBox withColor">With Color</div>
+          <div class="tagRoundBox withoutColor">Without Color</div>
           <div class="tagRoundBox twoSided">2 Sided</div>
 
         </div>
@@ -363,7 +341,7 @@
             <span class="recentCommandTagBoxDate">304 - A4</span>
           </div>
 
-          <div class="tagRoundBox withoutColor">Without Color</div>
+          <div class="tagRoundBox withColor">With Color</div>
           <div class="tagRoundBox oneSided">1 Sided</div>
 
         </div>
@@ -551,21 +529,21 @@
             <td class="paymentTitle paymentTablePadding" >Current Balance:</td>
             <td class="paymentTablePadding">
               <i class="fa-solid fa-dollar-sign" style="padding-right: 2px"></i>
-              <input required class="paymentWidth" type="number" min="0">
+              <input required class="paymentWidth" type="number" name="currentBalance" min="0" readonly>
             </td>
           </tr>
           <tr>
             <td class="paymentTitle paymentTablePadding">Add paper:</td>
             <td class="paymentTablePadding">
               <i class="fa-regular fa-file-lines"></i>
-              <input required class="paymentWidth" type="number" min="0">
+              <input required class="paymentWidth" type="number" name="addPaper" min="0">
             </td>
           </tr>
           <tr>
             <td class="paymentTitle paymentTablePadding">Amount to pay:</td>
             <td class="paymentTablePadding">
               <i class="fa-solid fa-dollar-sign" style="padding-right: 2px"></i>
-              <input required class="paymentWidth" type="number" min="0">
+              <input required class="paymentWidth" type="number" name="amountToPay" min="0" readonly>
             </td>
           </tr>
 
@@ -591,14 +569,14 @@
             <td class="paymentTitle paymentTablePadding" >Current Balance:</td>
             <td class="paymentTablePadding">
               <i class="fa-solid fa-dollar-sign" style="padding-right: 2px"></i>
-              <input class="paymentWidth" type="number" min="0" required>
+              <input class="paymentWidth" type="number" name="currentBalance" min="0" required readonly>
             </td>
           </tr>
           <tr>
             <td class="paymentTitle paymentTablePadding">Add Balance:</td>
             <td class="paymentTablePadding">
               <i class="fa-solid fa-dollar-sign" style="padding-right: 2px"></i>
-              <input class="paymentWidth" type="number" min="0" required>
+              <input class="paymentWidth" type="number" name="addBalance" min="0" required> 
             </td>
           </tr>
           <tr>

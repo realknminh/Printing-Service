@@ -50,13 +50,14 @@ button:active {
 .content{
   border-right: 2px solid #646B74;
   width: 1538px;
+  width: 100%;
   height: 1200px;
 }
 
 header{
   border: 2px solid #646B74;
   border-top: 0;
-  width: 1536px;
+  width: 100%;
   height: 50px;
 }
 
@@ -112,6 +113,10 @@ header{
 }
 
 #headerFuncBox{
+  position: absolute;
+  /* top: 10px;
+  left: 1100px; */
+  right: 0;
   width: fit-content;
   text-align: center;
   display: inline-block;
@@ -126,6 +131,11 @@ aside{
   border-right: 2px solid #646B74;
   border-left: 2px solid #646B74;
   align-items: center;      /* Căn giữa theo chiều dọc */
+}
+
+aside a {
+  text-decoration: none;
+  color: #000;
 }
 
 .sideBarIcon{
@@ -663,10 +673,6 @@ form{
   height: 800px; /* 842 */
   width: 700px; /* 1520*/
   margin: 21px 450px;
-}
-
-.propertyCoverBox{
-
 }
 
 .changePrinterBox{

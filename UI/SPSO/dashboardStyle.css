@@ -1,0 +1,535 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+* {
+    font-family: Lexend, serif;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    max-height: 1200px;
+    overflow: hidden;
+  }
+
+.navbar {
+    display: inline-flex;
+    height: 50px;
+    width: 100%;
+    border: 1px #646B74 solid;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header {
+    display: block;
+    padding: 6px 10px;
+    border-right: 1px #646B74 solid;
+    text-align: center;
+    width: 330px;
+    font-size: 16px;
+}
+
+.header-1 {
+    color: #039EFF;
+}
+
+.header-2 {
+    color: #2249C6;
+}
+
+.button-add-printer {
+    margin-right: 20px;
+    padding: 5px;
+    background-color: #3E63DD;
+    color: #fff;
+    border: 1px transparent;
+    border-radius: 7px;
+    font-size: 16px;
+}
+
+.button-add-printer:hover {
+    cursor: pointer;
+    background-color: #2249C6;
+}
+
+.main-body {
+    display: flex;
+}
+
+aside {
+    display: block;
+    position: sticky;
+    border: 1px #646B74 solid ;
+    border-top: 0px;
+    height: 875px;
+    width: 350px;
+}
+
+.side-button {
+    display: block;
+    background-color: #fff;
+    padding: 10px 0px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    font-size: 16px;
+}
+
+.active, .side-button:hover {
+    background-color: #646B74;
+    cursor: pointer;
+}
+
+a .side-button.active {
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a .side-button:hover {
+    color: #fff;
+}
+
+.side-bar-icon {
+    margin: 0px 20px;
+}
+
+.main-part {
+    display: flex;
+    flex: 1;
+}
+
+.middle-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-middle-part {
+    display: flex;
+    align-items: center;
+    width: 850px;
+}
+
+.top-middle-part .overall {
+    width: 220px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid #646B74;
+    border-radius: 8px;
+    margin: 30px 30px 20px 30px;
+    padding: 5px 10px;
+    gap: 10px;
+}
+
+.top-middle-part .overall .overall-title {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+}
+
+.statistics {
+    width: 790px;
+    height: 350px;
+    border: 1px #646B74 solid;
+    border-radius: 8px;
+}
+
+.statistics .statistics-header {
+    margin: 15px 10px 10px 10px;
+    font-size: 16px;
+}
+
+.statistics canvas {
+    display: block;
+    max-width: 90%;
+    max-height: 300px;
+}
+
+.bottom-middle-part {
+    width: 790px;
+    height: 350px;
+    border: 1px #646B74 solid;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.bottom-middle-part .bm-header {
+    margin: 15px 10px 10px 10px;
+    font-size: 16px;
+}
+
+.bottom-middle-part .command-list {
+    width: 100%;
+    height: 290px;
+    overflow: scroll;
+    font-size: 14px;
+}
+
+.bottom-middle-part .command-list .command {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+.bottom-middle-part .command-list .command i {
+    margin-left: 20px;
+    scale: 1.5;
+}
+
+.bottom-middle-part .command-list .command .printing-info {
+    display: flex;
+    align-items: center;
+    gap: 30px
+}
+
+.bottom-middle-part .command-list .command .printing-info p:nth-child(2) {
+    color: #646B74;
+}
+
+.bottom-middle-part .command-list .command .printing-info .without-color,
+.bottom-middle-part .command-list .command .printing-info .color {
+    border-radius: 8px;
+    padding: 5px;
+    width: 115px;
+    text-align: center;
+}
+
+.bottom-middle-part .command-list .command .printing-info .without-color {
+    background-color: #D9D9D9;
+}
+
+.bottom-middle-part .command-list .command .printing-info .color {
+    background-color: #F05F62;
+}
+
+.bottom-middle-part .command-list .command .printing-info .side-1,
+.bottom-middle-part .command-list .command .printing-info .side-2 {
+    border-radius: 8px;
+    padding: 5px;
+    width: 55px;
+    text-align: center;
+}
+
+.bottom-middle-part .command-list .command .printing-info .side-1 {
+    background-color: #F37A4E;
+}
+
+.bottom-middle-part .command-list .command .printing-info .side-2 {
+    background-color: #26C7E3;
+}
+
+.bottom-middle-part .command-list .command .user {
+    margin-right: 20px;
+    color: #646B74;
+}
+
+.right-part {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-right-part {
+    width: 450px;
+    height: 200px;
+    margin-top: 30px;
+    border-radius: 8px;
+    border: 1px #646B74 solid
+}
+
+.top-right-part .tr-header {
+    margin: 15px 10px 10px 10px;
+}
+
+.top-right-part .list-noti {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0px 10px 0px 10px;
+    overflow: auto;
+    height: 140px;
+    font-size: 14px;
+}
+
+.top-right-part .list-noti .noti {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    border-radius: 8px;
+    color: #fff;
+    background-color: red;
+    opacity: 0.6;
+    padding: 10px 20px;
+}
+
+.middle-right-part {
+    width: 450px;
+    height: 300px;
+    margin-top: 15px;
+    border-radius: 8px;
+    border: 1px #646B74 solid
+}
+
+.middle-right-part .mr-header {
+    margin: 15px 10px 10px 10px;
+}
+
+.middle-right-part .printer-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 240px;
+    font-size: 14px;
+    gap: 10px;
+    overflow: auto;
+}
+
+.middle-right-part .printer-list .printer-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.middle-right-part .printer-list .printer-action .printer-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.middle-right-part .printer-list .printer-action .printer-info .printer-list-icon {
+   margin: 0px 20px;
+   scale: 1.5;
+}
+
+.middle-right-part .printer-list .printer-action .printer-info .printer-name p:nth-child(2) {
+    color: #646B74;
+}
+
+.middle-right-part .printer-list .printer-action .printer-status {
+    margin-right: 20px;
+    text-align: center;
+}
+
+.middle-right-part .printer-list .printer-action .printer-status .process {
+    color: #3E63DD;
+}
+
+.middle-right-part .printer-list .printer-action .printer-status .done {
+    color: #24EC3C;
+}
+
+.middle-right-part .printer-list .printer-action .printer-status .wait {
+    color: #646B74;
+}
+ 
+.bottom-right-part {
+    width: 450px;
+    height: 300px;
+    margin-top: 15px;
+    border-radius: 8px;
+    border: 1px #646B74 solid
+}
+
+.bottom-right-part .br-header {
+    margin: 15px 10px 10px 10px;
+}
+
+.bottom-right-part .printer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+    height: 240px;
+    gap: 10px;
+    overflow: auto;
+}
+
+.bottom-right-part .printer-list .printer-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.bottom-right-part .printer-list .printer-info .printer-name {
+    text-align: center;
+    margin-left: 20px;
+}
+
+.bottom-right-part .printer-list .printer-info .printer-name span {
+    color: red;
+}
+
+.bottom-right-part .printer-list .printer-info .color,
+.bottom-right-part .printer-list .printer-info .without-color {
+    border-radius: 8px;
+    padding: 5px;
+    width: 115px;
+    text-align: center;
+}
+
+.bottom-right-part .printer-list .printer-info .color {
+    background-color: #F05F62;
+}
+
+.bottom-right-part .printer-list .printer-info .without-color {
+    background-color: #D9D9D9;
+}
+
+.bottom-right-part .printer-list .printer-info .side-1,
+.bottom-right-part .printer-list .printer-info .side-2{
+    border-radius: 8px;
+    padding: 5px;
+    width: 55px;
+    text-align: center;
+}
+
+.bottom-right-part .printer-list .printer-info .side-1 {
+    background-color: #F37A4E;
+}
+
+.bottom-right-part .printer-list .printer-info .side-2 {
+    background-color: #26C7E3;
+}
+
+.bottom-right-part .printer-list .printer-info .direction {
+    display: flex;
+    margin-right: 20px;
+    background-color: #EFF7FF;
+    border: 2px #646B74 solid;
+    border-radius: 8px;
+    padding: 5px;
+    align-items: center;
+}
+
+.bottom-right-part .printer-list .printer-info .direction:hover {
+    cursor: pointer;
+    background-color: #dfedfc;
+}
+
+.bottom-right-part .printer-list .printer-info .direction i {
+    margin-left: 10px;
+}
+
+.add-printer {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    position: absolute;
+    z-index: 11;
+    width: 100%;
+    height: 100vh;
+}
+
+.add-printer .overlay {
+    top: 0;
+    background-color: #000;
+    opacity: 0.3;
+    width: 100%;
+    height: 100vh;
+}
+
+.add-printer .form-add {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 400px;
+    height: max-content;
+    background-color: #fff;
+    gap: 50px;
+}
+
+.add-printer .form-add .logo {
+    width: 160px;
+    margin-top: 20px;
+}
+
+.add-printer .form-add #info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 300px;
+    margin-bottom: 100px;
+}
+
+.add-printer .form-add #info .name,
+.add-printer .form-add #info .num-paper,
+.add-printer .form-add #info .max,
+.add-printer .form-add #info .color,
+.add-printer .form-add #info .side,
+.add-printer .form-add #info .dir {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.add-printer .form-add #info .name #printer-name,
+.add-printer .form-add #info .num-paper #current-paper,
+.add-printer .form-add #info .max #max-paper,
+.add-printer .form-add #info .color #colors,
+.add-printer .form-add #info .side #sides,
+.add-printer .form-add #info .dir #directions {
+    border: 1px #858e9b solid;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.add-printer .form-add #info .name #printer-name:focus,
+.add-printer .form-add #info .num-paper #current-paper:focus,
+.add-printer .form-add #info .max #max-paper:focus,
+.add-printer .form-add #info .color #colors:focus,
+.add-printer .form-add #info .side #sides:focus,
+.add-printer .form-add #info .dir #directions:focus {
+    outline: none;
+    border-color: #000;
+}
+
+.add-printer .form-add #info .container-btn-add {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.add-printer .form-add #info .container-btn-add .btn-add,
+.add-printer .form-add #info .container-btn-add .btn-cancel {
+    width: 100px;
+    text-align: center;
+    padding: 5px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.add-printer .form-add #info .container-btn-add .btn-add {
+    border: none;
+    background-color: #3E63DD;
+    color: #fff;
+}
+
+.add-printer .form-add #info .container-btn-add .btn-cancel {
+    border: 1px #646B74 solid;
+    background-color: #fff;
+    color: #000;
+}
+
+.add-printer .form-add #info .container-btn-add .btn-add:hover {
+    cursor: pointer;
+    background-color: #2249C6;
+}
+
+.add-printer .form-add #info .container-btn-add .btn-cancel:hover {
+    cursor: pointer;
+    background-color: #f1f1f1;
+}

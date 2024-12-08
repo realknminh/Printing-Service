@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="loginStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="tab icon" type="icon" href="https://hcmut.edu.vn/img/nhanDienThuongHieu/01_logobachkhoatoi.png">
+    <title>Smart Printing Service</title>
+</head>
+
+<body>
+    <div class="account">
+        <img src="https://hcmut.edu.vn/img/nhanDienThuongHieu/01_logobachkhoatoi.png" alt="logo-bk" class="logo">
+        <p class="title">Access your account</p>
+        <form action="" id="login" class="login">
+            <input type="text" id="username" name="username" placeholder="Username" required>
+            <div class="pw">
+                <input type="password" name="password" id="password" placeholder="Password" required>
+                <button class="eye" type="button" onclick="toggleShow()">
+                    <i class="fa-regular fa-eye-slash"></i>
+                </button>
+            </div>
+            <div class="warning"></div>
+            <a href="#" class="forgot-pw">Forgot password?</a>
+            <div class="login-change">
+                <button type="button" class="btn-login">Login</button>
+                <div class="option">
+                    <a href="/UI/User/dashboard.html" class="user">
+                        <button type="button">
+                            User
+                        </button>
+                    </a>
+                    <a href="/UI/SPSO/dashboard.html" class="spso">
+                        <button type="button">
+                            SPSO
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <a href="#" class="signup">
+                <p>Does not have account? Signup here!</p>
+            </a>
+        </form>
+        <div class="or">
+            <hr>
+            <div class="text">
+                <p>Or continue with</p>
+            </div>
+            <hr>
+        </div>
+        <button class="email">
+            <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 48 48">
+                <path fill="#4caf50" d="M45,16.2l-5,2.75l-5,4.75L35,40h7c1.657,0,3-1.343,3-3V16.2z"></path>
+                <path fill="#1e88e5" d="M3,16.2l3.614,1.71L13,23.7V40H6c-1.657,0-3-1.343-3-3V16.2z"></path>
+                <polygon fill="#e53935" points="35,11.2 24,19.45 13,11.2 12,17 13,23.7 24,31.95 35,23.7 36,17">
+                </polygon>
+                <path fill="#c62828"
+                    d="M3,12.298V16.2l10,7.5V11.2L9.876,8.859C9.132,8.301,8.228,8,7.298,8h0C4.924,8,3,9.924,3,12.298z">
+                </path>
+                <path fill="#fbc02d"
+                    d="M45,12.298V16.2l-10,7.5V11.2l3.124-2.341C38.868,8.301,39.772,8,40.702,8h0 C43.076,8,45,9.924,45,12.298z">
+                </path>
+            </svg>
+            <p>Email</p>
+        </button>
+    </div>
+    <script src="loginScript.js"></script>
+</body>
+
+</html>

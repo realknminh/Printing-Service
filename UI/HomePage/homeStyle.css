@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+* {
+    font-family: Lexend, serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #3B87B0;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.nav-left .logo {
+    width: 60px;
+}
+
+.nav-left .home, .nav-left .about {
+    font-size: 15px;
+    padding: 15px 20px;
+    color: #fff;
+    height: 100%;
+    text-decoration: none;
+}
+
+.nav-left .home:hover, .nav-left .about:hover {
+    background-color: #1E4DC1;
+    cursor: pointer;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 94.5vh;
+    width: 100%;
+}
+
+.main .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    gap: 40px;
+    flex: 1;
+}
+
+.main .info h1 {
+    color: #0086FF;
+    width: 600px;
+    font-size: 50px;
+}
+
+.main .info h2 {
+    width: 500px;
+}
+
+.main .info .login {
+    width: 500px;
+    padding: 18px 0px;
+    font-size: 25px;
+    background-color: #0086FF;
+    color: #fff;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+.main .info .login:hover {
+    background-color: #027ae3;
+}
+
+.main .printer-img {
+    flex: 1;
+    width: 200px;
+    height: 650px;
+}

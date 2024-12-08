@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dashboardStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="tab icon" type="icon" href="https://hcmut.edu.vn/img/nhanDienThuongHieu/01_logobachkhoatoi.png">
+    <title>Smart Printing Service</title>
+</head>
+
+<body>
+    <!-- nav bar -->
+    <nav class="navbar">
+        <div class="header">
+            <p class="header-1">Ho Chi Minh City University of Technology</p>
+            <p class="header-2">Smart Printing Service</p>
+        </div>
+        <button class="button-add-printer" onclick="openModelAdd()">
+            <i class="fa-solid fa-plus"></i> Add Printer
+        </button>
+    </nav>
+    <!-- main body -->
+    <div class="main-body">
+        <!-- side nav -->
+        <aside>
+            <a href="dashboard.html">
+                <button class="side-button active" id="dashboard" onclick="setActiveSideBar('dashboard')">
+                    <i class="side-bar-icon fa-solid fa-house"></i>
+                    Control Panel
+                </button>
+            </a>
+            <a href="#">
+                <button class="side-button" id="properties" onclick="setActiveSideBar('properties')">
+                    <i class="side-bar-icon fa-solid fa-sliders" style="transform: rotate(-90deg)"></i>
+                    Printing Properties
+                </button>
+            </a>
+            <a href="#">
+                <button class="side-button" id="printer" onclick="setActiveSideBar('printer')">
+                    <i class="side-bar-icon fa-solid fa-print"></i> 
+                    Printer
+                </button>
+            </a>
+            <a href="/UI/Login/login.html">
+                <button class="side-button" id="sign-out" onclick="setActiveSideBar('sign-out')">
+                    <i class="side-bar-icon fa-solid fa-right-from-bracket" style="transform: rotate(180deg)"></i> 
+                    Sign Out
+                </button>
+            </a>
+        </aside>
+        <!-- dashboard -->
+        <div class="main-part">
+            <!-- middle part -->
+            <section class="middle-part">
+                <div class="top-middle-part">
+                    <div class="overall">
+                        <div class="overall-title">
+                           <p>Number of Printers</p>
+                            <i class="overall-icon fa-solid fa-print"></i>
+                        </div>
+                        <p>6</p>
+                    </div>
+                    <div class="overall">
+                        <div class="overall-title">
+                            <p>Total Commands</p>
+                            <i class="overall-icon fa-solid fa-terminal" style="padding-left: 19px"></i>
+                        </div>
+                        <p>3</p>
+                    </div>
+                    <div class="overall">
+                        <div class="overall-title">
+                            <p>Total Papers</p>
+                            <i class="overall-icon fa-regular fa-file-lines" style="padding-left: 19px; font-size: 18px"></i>
+                        </div>
+                        <p>10</p>
+                    </div>
+                </div>
+                <div class="statistics">
+                    <p class="statistics-header">Statistics</p>
+                    <canvas id="lineChart"></canvas>
+                </div>
+                <div class="bottom-middle-part">
+                    <p class="bm-header">Recent Commands</p>
+                    <div class="command-list">
+                        <div class="command">
+                            <i class="fa-regular fa-file-lines"></i>
+                            <div class="printing-info">
+                                <div class="document">
+                                    <p>Document_for_software.pdf</p>
+                                    <p>24 page - 12PM 18/10/2024</p>
+                                </div>
+                                <div class="without-color">
+                                    <p>Without Color</p>
+                                </div>
+                                <div class="side-2">
+                                    <p>2 Sided</p>
+                                </div>
+                            </div>
+                            <p class="user">Printed By Khoa</p>
+                        </div>
+                        <div class="command">
+                            <i class="fa-regular fa-file-lines"></i>
+                            <div class="printing-info">
+                                <div class="document">
+                                    <p>Document_for_software.pdf</p>
+                                    <p>24 page - 12PM 18/10/2024</p>
+                                </div>
+                                <div class="without-color">
+                                    <p>Without Color</p>
+                                </div>
+                                <div class="side-1">
+                                    <p>1 Sided</p>
+                                </div>
+                            </div>
+                            <p class="user">Printed By Khoa</p>
+                        </div>
+                        <div class="command">
+                            <i class="fa-regular fa-file-lines"></i>
+                            <div class="printing-info">
+                                <div class="document">
+                                    <p>Document_for_software.pdf</p>
+                                    <p>24 page - 12PM 18/10/2024</p>
+                                </div>
+                                <div class="color">
+                                    <p>With Color</p>
+                                </div>
+                                <div class="side-1">
+                                    <p>1 Sided</p>
+                                </div>
+                            </div>
+                            <p class="user">Printed By Khoa</p>
+                        </div>
+                        <div class="command">
+                            <i class="fa-regular fa-file-lines"></i>
+                            <div class="printing-info">
+                                <div class="document">
+                                    <p>Document_for_software.pdf</p>
+                                    <p>24 page - 12PM 18/10/2024</p>
+                                </div>
+                                <div class="color">
+                                    <p>With Color</p>
+                                </div>
+                                <div class="side-2">
+                                    <p>2 Sided</p>
+                                </div>
+                            </div>
+                            <p class="user">Printed By Khoa</p>
+                        </div>
+                        <div class="command">
+                            <i class="fa-regular fa-file-lines"></i>
+                            <div class="printing-info">
+                                <div class="document">
+                                    <p>Document_for_software.pdf</p>
+                                    <p>24 page - 12PM 18/10/2024</p>
+                                </div>
+                                <div class="color">
+                                    <p>With Color</p>
+                                </div>
+                                <div class="side-1">
+                                    <p>1 Sided</p>
+                                </div>
+                            </div>
+                            <p class="user">Printed By Khoa</p>
+                        </div>
+                        <div class="command">
+                            <i class="fa-regular fa-file-lines"></i>
+                            <div class="printing-info">
+                                <div class="document">
+                                    <p>Document_for_software.pdf</p>
+                                    <p>24 page - 12PM 18/10/2024</p>
+                                </div>
+                                <div class="without-color">
+                                    <p>Without Color</p>
+                                </div>
+                                <div class="side-2">
+                                    <p>2 Sided</p>
+                                </div>
+                            </div>
+                            <p class="user">Printed By Khoa</p>
+                        </div>
+                        <div class="command">
+                            <i class="fa-regular fa-file-lines"></i>
+                            <div class="printing-info">
+                                <div class="document">
+                                    <p>Document_for_software.pdf</p>
+                                    <p>24 page - 12PM 18/10/2024</p>
+                                </div>
+                                <div class="without-color">
+                                    <p>Without Color</p>
+                                </div>
+                                <div class="side-2">
+                                    <p>2 Sided</p>
+                                </div>
+                            </div>
+                            <p class="user">Printed By Khoa</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- right part -->
+            <section class="right-part">
+                <div class="top-right-part">
+                    <p class="tr-header">Notifications</p>
+                    <div class="list-noti">
+                        <div class="noti">
+                            <i class="fa-solid fa-circle-info"></i>
+                            <p>Printer A is out of ink</p>
+                        </div>
+                        <div class="noti">
+                            <i class="fa-solid fa-circle-info"></i>
+                            <p>Printer A is out of paper</p>
+                        </div>
+                        <div class="noti">
+                            <i class="fa-solid fa-circle-info"></i>
+                            <p>Printer A is out of paper</p>
+                        </div>
+                        <div class="noti">
+                            <i class="fa-solid fa-circle-info"></i>
+                            <p>Printer A is out of paper</p>
+                        </div>
+                        <div class="noti">
+                            <i class="fa-solid fa-circle-info"></i>
+                            <p>Printer A is out of paper</p>
+                        </div>
+                        <div class="noti">
+                            <i class="fa-solid fa-circle-info"></i>
+                            <p>Printer A is out of paper</p>
+                        </div>
+                        <div class="noti">
+                            <i class="fa-solid fa-circle-info"></i>
+                            <p>Printer A is out of paper</p>
+                        </div>
+                        <div class="noti">
+                            <i class="fa-solid fa-circle-info"></i>
+                            <p>Printer A is out of paper</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="middle-right-part">
+                    <p class="mr-header">Current Printers</p>
+                    <div class="printer-list">
+                        <div class="printer-action">
+                            <div class="printer-info">
+                                <i class="printer-list-icon fa-solid fa-print"></i>
+                                <div class="printer-name">
+                                    <p>Printer B</p>
+                                    <p>302-A4</p>
+                                </div>
+                            </div>
+                            <div class="printer-status">
+                                <p>Printing</p>
+                                <p class="process">5/20</p>
+                            </div>
+                        </div>
+                        <div class="printer-action">
+                            <div class="printer-info">
+                                <i class="printer-list-icon fa-solid fa-print"></i>
+                                <div class="printer-name">
+                                    <p>Printer B</p>
+                                    <p>302-A4</p>
+                                </div>
+                            </div>
+                            <div class="printer-status">
+                                <p>Printing</p>
+                                <p class="done">Done</p>
+                            </div>
+                        </div>
+                        <div class="printer-action">
+                            <div class="printer-info">
+                                <i class="printer-list-icon fa-solid fa-print"></i>
+                                <div class="printer-name">
+                                    <p>Printer B</p>
+                                    <p>302-A4</p>
+                                </div>
+                            </div>
+                            <div class="printer-status">
+                                <p>Printing</p>
+                                <p class="wait">Waiting</p>
+                            </div>
+                        </div>
+                        <div class="printer-action">
+                            <div class="printer-info">
+                                <i class="printer-list-icon fa-solid fa-print"></i>
+                                <div class="printer-name">
+                                    <p>Printer B</p>
+                                    <p>302-A4</p>
+                                </div>
+                            </div>
+                            <div class="printer-status">
+                                <p>Printing</p>
+                                <p class="process">5/20</p>
+                            </div>
+                        </div>
+                        <div class="printer-action">
+                            <div class="printer-info">
+                                <i class="printer-list-icon fa-solid fa-print"></i>
+                                <div class="printer-name">
+                                    <p>Printer B</p>
+                                    <p>302-A4</p>
+                                </div>
+                            </div>
+                            <div class="printer-status">
+                                <p>Printing</p>
+                                <p class="done">Done</p>
+                            </div>
+                        </div>
+                        <div class="printer-action">
+                            <div class="printer-info">
+                                <i class="printer-list-icon fa-solid fa-print"></i>
+                                <div class="printer-name">
+                                    <p>Printer B</p>
+                                    <p>302-A4</p>
+                                </div>
+                            </div>
+                            <div class="printer-status">
+                                <p>Printing</p>
+                                <p class="process">5/20</p>
+                            </div>
+                        </div>
+                        <div class="printer-action">
+                            <div class="printer-info">
+                                <i class="printer-list-icon fa-solid fa-print"></i>
+                                <div class="printer-name">
+                                    <p>Printer B</p>
+                                    <p>302-A4</p>
+                                </div>
+                            </div>
+                            <div class="printer-status">
+                                <p>Printing</p>
+                                <p class="done">Done</p>
+                            </div>
+                        </div>
+                        <div class="printer-action">
+                            <div class="printer-info">
+                                <i class="printer-list-icon fa-solid fa-print"></i>
+                                <div class="printer-name">
+                                    <p>Printer B</p>
+                                    <p>302-A4</p>
+                                </div>
+                            </div>
+                            <div class="printer-status">
+                                <p>Printing</p>
+                                <p class="wait">Waiting</p>
+                            </div>
+                        </div>
+                        <div class="printer-action">
+                            <div class="printer-info">
+                                <i class="printer-list-icon fa-solid fa-print"></i>
+                                <div class="printer-name">
+                                    <p>Printer B</p>
+                                    <p>302-A4</p>
+                                </div>
+                            </div>
+                            <div class="printer-status">
+                                <p>Printing</p>
+                                <p class="process">5/20</p>
+                            </div>
+                        </div>
+                        <div class="printer-action">
+                            <div class="printer-info">
+                                <i class="printer-list-icon fa-solid fa-print"></i>
+                                <div class="printer-name">
+                                    <p>Printer B</p>
+                                    <p>302-A4</p>
+                                </div>
+                            </div>
+                            <div class="printer-status">
+                                <p>Printing</p>
+                                <p class="done">Done</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-right-part">
+                    <p class="br-header">Available Printers</p>
+                    <div class="printer-list">
+                        <div class="printer-info">
+                            <div class="printer-name">
+                                <p>Printer A</p>
+                                <p><span>2</span>/150</p>
+                            </div>
+                            <div class="color">
+                                <p>Color</p>
+                            </div>
+                            <div class="side-1">
+                                <p>1 Sided</p>
+                            </div>
+                            <button class="direction">
+                                <p>Direction</p>
+                                <i class="fa-solid fa-location-dot"></i>
+                            </button>
+                        </div>
+                        <div class="printer-info">
+                            <div class="printer-name">
+                                <p>Printer B</p>
+                                <p>50/150</p>
+                            </div>
+                            <div class="without-color">
+                                <p>Without Color</p>
+                            </div>
+                            <div class="side-2">
+                                <p>2 Sided</p>
+                            </div>
+                            <button class="direction">
+                                <p>Direction</p>
+                                <i class="fa-solid fa-location-dot"></i>
+                            </button>
+                        </div>
+                        <div class="printer-info">
+                            <div class="printer-name">
+                                <p>Printer C</p>
+                                <p>100/150</p>
+                            </div>
+                            <div class="without-color">
+                                <p>Without Color</p>
+                            </div>
+                            <div class="side-1">
+                                <p>1 Sided</p>
+                            </div>
+                            <button class="direction">
+                                <p>Direction</p>
+                                <i class="fa-solid fa-location-dot"></i>
+                            </button>
+                        </div>
+                        <div class="printer-info">
+                            <div class="printer-name">
+                                <p>Printer D</p>
+                                <p>90/150</p>
+                            </div>
+                            <div class="color">
+                                <p>Color</p>
+                            </div>
+                            <div class="side-1">
+                                <p>1 Sided</p>
+                            </div>
+                            <button class="direction">
+                                <p>Direction</p>
+                                <i class="fa-solid fa-location-dot"></i>
+                            </button>
+                        </div>
+                        <div class="printer-info">
+                            <div class="printer-name">
+                                <p>Printer E</p>
+                                <p>150/150</p>
+                            </div>
+                            <div class="color">
+                                <p>Color</p>
+                            </div>
+                            <div class="side-2">
+                                <p>2 Sided</p>
+                            </div>
+                            <button class="direction">
+                                <p>Direction</p>
+                                <i class="fa-solid fa-location-dot"></i>
+                            </button>
+                        </div>
+                        <div class="printer-info">
+                            <div class="printer-name">
+                                <p>Printer F</p>
+                                <p><span>10</span>/150</p>
+                            </div>
+                            <div class="without-color">
+                                <p>Without Color</p>
+                            </div>
+                            <div class="side-2">
+                                <p>2 Sided</p>
+                            </div>
+                            <button class="direction">
+                                <p>Direction</p>
+                                <i class="fa-solid fa-location-dot"></i>
+                            </button>
+                        </div>
+                        <div class="printer-info">
+                            <div class="printer-name">
+                                <p>Printer G</p>
+                                <p>120/150</p>
+                            </div>
+                            <div class="color">
+                                <p>Color</p>
+                            </div>
+                            <div class="side-2">
+                                <p>2 Sided</p>
+                            </div>
+                            <button class="direction">
+                                <p>Direction</p>
+                                <i class="fa-solid fa-location-dot"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- form for add printer -->
+    <div class="add-printer">
+        <div class="overlay"></div>
+        <div class="form-add">
+            <img src="https://hcmut.edu.vn/img/nhanDienThuongHieu/01_logobachkhoatoi.png" alt="logo-bk" class="logo">
+            <form action="" id="info">
+                <div class="name">
+                    <label for="printerName">Printer name:</label>
+                    <input type="text" id="printer-name" name="printerName" placeholder="Printer name" required>
+                </div>
+                <div class="num-paper">
+                    <label for="currentPaper">Current paper:</label>
+                    <input type="text" id="current-paper" name="currentPaper" placeholder="Current paper" required>
+                </div>
+                <div class="max">
+                    <label for="maxPaper">Max paper:</label>
+                    <input type="text" id="max-paper" name="maxPaper" placeholder="Max paper" required>
+                </div>
+                <div class="color">
+                    <label for="colorOption">Paper color:</label>
+                    <select id="colors" name="colorOption" form="info" required>
+                        <option value="with-color">With Color</option>
+                        <option value="without-color">Without Color</option>
+                    </select>
+                </div>
+                <div class="side">
+                    <label for="sideOption">Number of paper's side:</label>
+                    <select id="sides" name="sideOption" form="info" required>
+                        <option value="side-1">1 Sided</option>
+                        <option value="side-2">2 Sided</option>
+                    </select>
+                </div>
+                <div class="dir">
+                    <label for="directionOption">Direction:</label>
+                    <select id="directions" name="directionOption" form="info" required>
+                        <option value="304-B4">304-B4</option>
+                        <option value="105-C5">105-C5</option>
+                        <option value="201-A4">201-A4</option>
+                        <option value="503-A4">503-A4</option>
+                    </select>
+                </div>
+                <div class="container-btn-add">
+                    <button class="btn-add" type="submit">Add</button>
+                    <button class="btn-cancel" type="button" onclick="closeModelAdd()">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="dashboardScript.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="lineChart.js"></script>
+</body>
+
+</html>

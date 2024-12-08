@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
   <meta charset="utf-8">
   <link rel="tab icon" type="icon" href="https://hcmut.edu.vn/img/nhanDienThuongHieu/01_logobachkhoatoi.png">
   <meta name="keywords" content="HTML, CSS, JAVASCRIPT">
   <meta name="description" content="Học HTML CSS">
   <meta name="author" content="Trần Xuân Bách">
-  <title>Demo</title>
+  <title>Smart Printing Service</title>
   <link rel="stylesheet" href="style.css">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script src="../User_BE/PurchasePaper_AddBalance.js"></script>
+
 </head>
 
 <body>
@@ -22,9 +23,12 @@
         <span id="headerName2">Smart Printing Service</span>
       </div>
       <div id="headerFuncBox">
-        <button onclick="showPaymentContent()" class="headerFunc1"><i class="fa-solid fa-plus"></i>  Purchase Paper</button>
-        <button onclick="showBalanceContent()" class="headerFunc1"><i class="fa-solid fa-dollar-sign"></i>  Add Balance</button>
-        <button onclick="showUploadContent()" class="headerFunc2" style="padding-right: 5px"><i class="fa-solid fa-plus"></i>  New Print</button>
+        <button onclick="showPaymentContent()" class="headerFunc1"><i class="fa-solid fa-plus"></i> Purchase
+          Paper</button>
+        <button onclick="showBalanceContent()" class="headerFunc1"><i class="fa-solid fa-dollar-sign"></i> Add
+          Balance</button>
+        <button onclick="showUploadContent()" class="headerFunc2" style="padding-right: 5px"><i
+            class="fa-solid fa-plus"></i> New Print</button>
       </div>
     </div>
 
@@ -33,36 +37,43 @@
   <aside>
     <div class="buttonSideBar"><i class="fa-solid fa-bars"></i></div>
     <div class="sideBar" id="firstSideBar"><i class="sideBarIcon fa-regular fa-house"></i>Control Panel</div>
-    <div class="sideBar" ><i class="sideBarIcon fa-solid fa-sliders" style="transform: rotate(-90deg)" ></i>Printing Properties</div>
-    <div class="sideBar" ><i class="sideBarIcon fa-solid fa-print"></i>Printer</div>
-    <div class="sideBar"><i class="sideBarIcon fa-solid fa-right-from-bracket" style="transform: rotate(180deg)"></i>Sign Out</div>
+    <div class="sideBar"><i class="sideBarIcon fa-solid fa-sliders" style="transform: rotate(-90deg)"></i>Printing
+      Properties</div>
+    <div class="sideBar"><i class="sideBarIcon fa-solid fa-print"></i>Printer</div>
+    <a href="/UI/Login/login.html">
+      <div class="sideBar">
+        <i class="sideBarIcon fa-solid fa-right-from-bracket" style="transform: rotate(180deg)"></i>
+        Sign Out
+      </div>
+    </a>
   </aside>
 
   <div class="content">
     <div class="statisticBox">
     <span class="statistic1">Current Balance <i class="fa-solid fa-dollar-sign" style="padding-left: 31px"></i>
       <br>
-      <span class="statisticNumber currentBalance">0</span>
+      <span class="statisticNumber">2024</span>
     </span>
       <span class="statistic1">Total Commands <i class="fa-solid fa-terminal" style="padding-left: 19px"></i>
-      <br>
-      <span class="statisticNumber">5</span>
-    </span>
-      <span class="statistic1">Remaining Paper <i class="fa-regular fa-file-lines" style="padding-left: 19px; font-size: 18px"></i>
-      <br>
-      <span class="statisticNumber">16</span>
-    </span>
+        <br>
+        <span class="statisticNumber">5</span>
+      </span>
+      <span class="statistic1">Remaining Paper <i class="fa-regular fa-file-lines"
+          style="padding-left: 19px; font-size: 18px"></i>
+        <br>
+        <span class="statisticNumber">16</span>
+      </span>
     </div>
 
     <div class="commandBox">
       <span class="commandTitle">Current Commands</span>
       <div class="commandBox2">
         <div class="commandInformationBox">
-<!--          <span>Blank</span>-->
-<!--          <br>-->
-<!--          <span class="commandTitleContent">Create New Command</span>-->
+          <!--          <span>Blank</span>-->
+          <!--          <br>-->
+          <!--          <span class="commandTitleContent">Create New Command</span>-->
           <div class="CommandTagBox">
-              <i class="fa-regular fa-file-lines" style="font-size: 16px;"></i>
+            <i class="fa-regular fa-file-lines" style="font-size: 16px;"></i>
             <div class="recentCommandTagBoxInfo noMargin">
               <span class="recentCommandTagBoxName smallSize">Document_for_software.pdf</span>
               <br>
@@ -526,7 +537,7 @@
       <form target="_self" method="post" autocomplete="on">
         <table class="paymentTable">
           <tr>
-            <td class="paymentTitle paymentTablePadding" >Current Balance:</td>
+            <td class="paymentTitle paymentTablePadding">Current Balance:</td>
             <td class="paymentTablePadding">
               <i class="fa-solid fa-dollar-sign" style="padding-right: 2px"></i>
               <input required class="paymentWidth" type="number" name="currentBalance" min="0" readonly>
@@ -551,7 +562,8 @@
 
         <div class="paymentButton">
           <button class="paymentButton1" onclick="exitPaymentContent()">Cancel</button>
-          <input required type="submit" class="paymentButton1" style="background: #3E63DD; color: white; cursor: pointer" value="Submit">
+          <input required type="submit" class="paymentButton1"
+            style="background: #3E63DD; color: white; cursor: pointer" value="Submit">
         </div>
       </form>
 
@@ -566,7 +578,7 @@
       <form target="_self" method="post" autocomplete="on">
         <table class="paymentTable">
           <tr>
-            <td class="paymentTitle paymentTablePadding" >Current Balance:</td>
+            <td class="paymentTitle paymentTablePadding">Current Balance:</td>
             <td class="paymentTablePadding">
               <i class="fa-solid fa-dollar-sign" style="padding-right: 2px"></i>
               <input class="paymentWidth" type="number" name="currentBalance" min="0" required readonly>
@@ -583,7 +595,7 @@
             <td class="paymentTitle paymentTablePadding">Choose payment method:</td>
             <td class="paymentTablePadding">
               <select required>
-                <option selected disabled value="" >Choose one</option>
+                <option selected disabled value="">Choose one</option>
                 <option value="bkPay">BK Pay</option>
                 <option value="momo">Momo</option>
                 <option value="smartBanking">Smart Banking</option>
@@ -595,7 +607,8 @@
 
         <div class="paymentButton">
           <button class="paymentButton1" onclick="exitBalanceContent()">Cancel</button>
-          <input type="submit" class="paymentButton1" style="background: #3E63DD; color: white; cursor: pointer" value="Submit">
+          <input type="submit" class="paymentButton1" style="background: #3E63DD; color: white; cursor: pointer"
+            value="Submit">
         </div>
       </form>
 
@@ -614,7 +627,8 @@
 
         <div class="uploadCoverBox">
           <div class="uploadLineControl">
-            <span class="uploadCoverBoxContent" style="padding-left: 0;margin-bottom: -2px;border-bottom: 2px solid #3E63DD">Upload new files</span>
+            <span class="uploadCoverBoxContent"
+              style="padding-left: 0;margin-bottom: -2px;border-bottom: 2px solid #3E63DD">Upload new files</span>
             <span class="uploadCoverBoxContent">Recent files</span>
             <span class="uploadCoverBoxContent">Google Drive</span>
           </div>
@@ -632,7 +646,8 @@
 
           <div class="paymentButton positionUploadButton">
             <button class="paymentButton1" type="button" onclick="exitUploadContent()">Cancel</button>
-            <button class="paymentButton1" type="button" onclick="showPrinterContent()" style="background: #3E63DD; color: white;">Upload</button>
+            <button class="paymentButton1" type="button" onclick="showPrinterContent()"
+              style="background: #3E63DD; color: white;">Upload</button>
           </div>
         </div>
 
@@ -644,14 +659,16 @@
       <div class="paymentBox uploadModify">
         <div class="uploadTitle">
           <div class="uploadTitle1">Choose Printer</div>
-          <div class="uploadTitle2">Select printer to print or change upload file <button onclick="exitPrinterContent(); showUploadContent()" class="buttonTestPdf">test.pdf</button></div>
+          <div class="uploadTitle2">Select printer to print or change upload file <button
+              onclick="exitPrinterContent(); showUploadContent()" class="buttonTestPdf">test.pdf</button></div>
           <!-- Enter href equal link to pdf-->
         </div>
 
         <div class="printerCoverBox">
           <div class="printerCoverBox2">
             <label class="printerChooseBox">
-              <input style="display: none;" type="radio" onclick="pickPrinter('Printer 1'); showSettingContent();" name="Printer" value="Printer 1">
+              <input style="display: none;" type="radio" onclick="pickPrinter('Printer 1'); showSettingContent();"
+                name="Printer" value="Printer 1">
               <div class="printerContent">
                 <i class="itemPrinter fa-solid fa-print" style="font-size: 25px"></i>
                 <br>
@@ -667,7 +684,8 @@
             </label>
 
             <label class="printerChooseBox">
-              <input style="display: none;" type="radio" onclick="pickPrinter('Printer 2'); showSettingContent();" name="Printer" value="Printer 1">
+              <input style="display: none;" type="radio" onclick="pickPrinter('Printer 2'); showSettingContent();"
+                name="Printer" value="Printer 1">
               <div class="printerContent">
                 <i class="itemPrinter fa-solid fa-print" style="font-size: 25px"></i>
                 <br>
@@ -683,7 +701,8 @@
             </label>
 
             <label class="printerChooseBox">
-              <input style="display: none;" type="radio" onclick="pickPrinter('Printer 3'); showSettingContent();" name="Printer" value="Printer 1">
+              <input style="display: none;" type="radio" onclick="pickPrinter('Printer 3'); showSettingContent();"
+                name="Printer" value="Printer 1">
               <div class="printerContent">
                 <i class="itemPrinter fa-solid fa-print" style="font-size: 25px"></i>
                 <br>
@@ -701,7 +720,8 @@
 
           <div class="printerCoverBox2">
             <label class="printerChooseBox">
-              <input style="display: none;" type="radio" onclick="pickPrinter('Printer 4'); showSettingContent();" name="Printer" value="Printer 1">
+              <input style="display: none;" type="radio" onclick="pickPrinter('Printer 4'); showSettingContent();"
+                name="Printer" value="Printer 1">
               <div class="printerContent">
                 <i class="itemPrinter fa-solid fa-print" style="font-size: 25px"></i>
                 <br>
@@ -717,7 +737,8 @@
             </label>
 
             <label class="printerChooseBox">
-              <input style="display: none;" type="radio" onclick="pickPrinter('Printer 5'); showSettingContent();" name="Printer" value="Printer 1">
+              <input style="display: none;" type="radio" onclick="pickPrinter('Printer 5'); showSettingContent();"
+                name="Printer" value="Printer 1">
               <div class="printerContent">
                 <i class="itemPrinter fa-solid fa-print" style="font-size: 25px"></i>
                 <br>
@@ -733,7 +754,8 @@
             </label>
 
             <label class="printerChooseBox">
-              <input style="display: none;" type="radio" onclick="pickPrinter('Printer 6'); showSettingContent();" name="Printer" value="Printer 1">
+              <input style="display: none;" type="radio" onclick="pickPrinter('Printer 6'); showSettingContent();"
+                name="Printer" value="Printer 1">
               <div class="printerContent">
                 <i class="itemPrinter fa-solid fa-print" style="font-size: 25px"></i>
                 <br>
@@ -751,7 +773,8 @@
 
           <div class="printerCoverBox2">
             <label class="printerChooseBox">
-              <input style="display: none;" type="radio" onclick="pickPrinter('Printer 7'); showSettingContent();" name="Printer" value="Printer 1">
+              <input style="display: none;" type="radio" onclick="pickPrinter('Printer 7'); showSettingContent();"
+                name="Printer" value="Printer 1">
               <div class="printerContent">
                 <i class="itemPrinter fa-solid fa-print" style="font-size: 25px"></i>
                 <br>
@@ -767,7 +790,8 @@
             </label>
 
             <label class="printerChooseBox">
-              <input style="display: none;" type="radio" onclick="pickPrinter('Printer 8'); showSettingContent();" name="Printer" value="Printer 1">
+              <input style="display: none;" type="radio" onclick="pickPrinter('Printer 8'); showSettingContent();"
+                name="Printer" value="Printer 1">
               <div class="printerContent">
                 <i class="itemPrinter fa-solid fa-print" style="font-size: 25px"></i>
                 <br>
@@ -783,7 +807,8 @@
             </label>
 
             <label class="printerChooseBox">
-              <input style="display: none;" type="radio" onclick="pickPrinter('Printer 9'); showSettingContent();" name="Printer" value="Printer 1">
+              <input style="display: none;" type="radio" onclick="pickPrinter('Printer 9'); showSettingContent();"
+                name="Printer" value="Printer 1">
               <div class="printerContent">
                 <i class="itemPrinter fa-solid fa-print" style="font-size: 25px"></i>
                 <br>
@@ -817,16 +842,18 @@
       <div class="paymentBox propertyModify">
         <div class="uploadTitle">
           <div class="uploadTitle1">Print settings</div>
-          <div class="uploadTitle2">Adjust print setting or change upload file <button onclick="exitSettingContent(); showUploadContent()" class="buttonTestPdf">test.pdf</button></div>
+          <div class="uploadTitle2">Adjust print setting or change upload file <button
+              onclick="exitSettingContent(); showUploadContent()" class="buttonTestPdf">test.pdf</button></div>
           <!-- Enter href equal link to pdf-->
         </div>
 
         <div class="uploadCoverBox propertyCoverBox">
 
-          <div class="changePrinterBox" >
+          <div class="changePrinterBox">
 
             <label class="printerChooseBox" style="border: none">
-              <input style="display: none;" type="radio" onclick="pickPrinter('Printer 1')" name="Printer" value="Printer 1">
+              <input style="display: none;" type="radio" onclick="pickPrinter('Printer 1')" name="Printer"
+                value="Printer 1">
               <div class="printerContent">
                 <i class="itemPrinter fa-solid fa-print" style="font-size: 25px"></i>
                 <br>
@@ -841,42 +868,43 @@
 
             </label>
 
-            <button onclick="exitSettingContent(); showPrinterContent()" class="buttonTestPdf" style="padding-right: 30px">Change Printer</button>
+            <button onclick="exitSettingContent(); showPrinterContent()" class="buttonTestPdf"
+              style="padding-right: 30px">Change Printer</button>
           </div>
 
           <div class="propertyBox">
             <div>
-            <ul>
-              <li>Page Size</li>
-              <li>
-                <select required>
-                  <option disabled value="">Select paper size</option>
-                  <option value="A4">A4</option>
-                  <option value="A3">A3</option>
-                </select>
-              </li>
-              <li>Layout</li>
-              <li><input type="radio" name="Layout">Vertical</li>
-              <li><input type="radio" name="Layout">Horizontal</li>
-              <li>Number of Pages</li>
-              <li><input type="radio" name="numberOfPage" value="All" onclick="toggleInputField()">All</li>
-              <li><input type="radio" name="numberOfPage" value="Even" onclick="toggleInputField()">Even only</li>
-              <li><input type="radio" name="numberOfPage" value="Odd" onclick="toggleInputField()">Odd only</li>
-              <li><input  type="radio" value="Custom" name="numberOfPage" onclick="toggleInputField()">
-              <input required id="customPageNumber" type="text" placeholder="e.g., 3, 5-7" readonly >
-              </li>
+              <ul>
+                <li>Page Size</li>
+                <li>
+                  <select required>
+                    <option disabled value="">Select paper size</option>
+                    <option value="A4">A4</option>
+                    <option value="A3">A3</option>
+                  </select>
+                </li>
+                <li>Layout</li>
+                <li><input type="radio" name="Layout">Vertical</li>
+                <li><input type="radio" name="Layout">Horizontal</li>
+                <li>Number of Pages</li>
+                <li><input type="radio" name="numberOfPage" value="All" onclick="toggleInputField()">All</li>
+                <li><input type="radio" name="numberOfPage" value="Even" onclick="toggleInputField()">Even only</li>
+                <li><input type="radio" name="numberOfPage" value="Odd" onclick="toggleInputField()">Odd only</li>
+                <li><input type="radio" value="Custom" name="numberOfPage" onclick="toggleInputField()">
+                  <input required id="customPageNumber" type="text" placeholder="e.g., 3, 5-7" readonly>
+                </li>
 
-              <li>Color</li>
-              <li>
-                <select required>
-                  <option disabled value="">Select color</option>
-                  <option value="withColor">With Color</option>
-                  <option value="withOutColor">Without Color</option>
-                </select>
-              </li>
+                <li>Color</li>
+                <li>
+                  <select required>
+                    <option disabled value="">Select color</option>
+                    <option value="withColor">With Color</option>
+                    <option value="withOutColor">Without Color</option>
+                  </select>
+                </li>
 
 
-            </ul>
+              </ul>
             </div>
             <div>
               <img style="width: 360px" src="pic1.png">
@@ -898,85 +926,86 @@
 
 
 
-<script>
+  <script>
 
-  function toggleInputField() {
-    var selectedOption = document.querySelector('input[name="numberOfPage"]:checked').value;
-    var customPageInput = document.getElementById("customPageNumber");
+    function toggleInputField() {
+      var selectedOption = document.querySelector('input[name="numberOfPage"]:checked').value;
+      var customPageInput = document.getElementById("customPageNumber");
 
-    if (selectedOption === "Custom") {
-      customPageInput.readOnly = false; // Allow input when "Custom" is selected
-    } else {
-      customPageInput.readOnly = true; // Make the input field readonly when not "Custom"
-      customPageInput.value = ''; // Clear the input field when not "Custom"
-    }
-  }
-  function showPaymentContent(){
-    var content = document.getElementById('paymentControl');
-    content.style.display = 'block'; // Hiển thị phần tử có id là 'extraContent'
-  }
-
-  function exitPaymentContent(){
-    var content = document.getElementById('paymentControl');
-    content.style.display = 'none';
-  }
-
-  function showBalanceContent(){
-    var content = document.getElementById('balanceControl');
-    content.style.display = 'block'; // Hiển thị phần tử có id là 'extraContent'
-  }
-
-  function exitBalanceContent(){
-    var content = document.getElementById('balanceControl');
-    content.style.display = 'none';
-  }
-
-  function showUploadContent(){
-    var content = document.getElementById('uploadControl');
-    content.style.display = 'block'; // Hiển thị phần tử có id là 'extraContent'
-  }
-
-  function exitUploadContent(){
-    var content = document.getElementById('uploadControl');
-    content.style.display = 'none';
-  }
-  function showSettingContent(){
-    var content = document.getElementById('propertyControl');
-    content.style.display = 'block'; // Hiển thị phần tử có id là 'extraContent'
-  }
-
-  function exitSettingContent(){
-    var content = document.getElementById('propertyControl');
-    content.style.display = 'none';
-  }
-  function showPrinterContent(){
-    function validateAndProceed() {
-      var fileInput = document.getElementById("uploadFile");
-
-      // Check if a file is selected
-      if (!fileInput.files.length) {
-        alert("Please select a file before proceeding.");
-        return;  // Don't proceed if no file is selected
+      if (selectedOption === "Custom") {
+        customPageInput.readOnly = false; // Allow input when "Custom" is selected
+      } else {
+        customPageInput.readOnly = true; // Make the input field readonly when not "Custom"
+        customPageInput.value = ''; // Clear the input field when not "Custom"
       }
-
-      // If file is selected, proceed to the next page
-      exitUploadContent();
-      document.getElementById('printerControl').style.display = 'block';
     }
-    validateAndProceed();
+    function showPaymentContent() {
+      var content = document.getElementById('paymentControl');
+      content.style.display = 'block'; // Hiển thị phần tử có id là 'extraContent'
+    }
+
+    function exitPaymentContent() {
+      var content = document.getElementById('paymentControl');
+      content.style.display = 'none';
+    }
+
+    function showBalanceContent() {
+      var content = document.getElementById('balanceControl');
+      content.style.display = 'block'; // Hiển thị phần tử có id là 'extraContent'
+    }
+
+    function exitBalanceContent() {
+      var content = document.getElementById('balanceControl');
+      content.style.display = 'none';
+    }
+
+    function showUploadContent() {
+      var content = document.getElementById('uploadControl');
+      content.style.display = 'block'; // Hiển thị phần tử có id là 'extraContent'
+    }
+
+    function exitUploadContent() {
+      var content = document.getElementById('uploadControl');
+      content.style.display = 'none';
+    }
+    function showSettingContent() {
+      var content = document.getElementById('propertyControl');
+      content.style.display = 'block'; // Hiển thị phần tử có id là 'extraContent'
+    }
+
+    function exitSettingContent() {
+      var content = document.getElementById('propertyControl');
+      content.style.display = 'none';
+    }
+    function showPrinterContent() {
+      function validateAndProceed() {
+        var fileInput = document.getElementById("uploadFile");
+
+        // Check if a file is selected
+        if (!fileInput.files.length) {
+          alert("Please select a file before proceeding.");
+          return;  // Don't proceed if no file is selected
+        }
+
+        // If file is selected, proceed to the next page
+        exitUploadContent();
+        document.getElementById('printerControl').style.display = 'block';
+      }
+      validateAndProceed();
 
 
-  }
-  function exitPrinterContent(){
-    var content = document.getElementById('printerControl');
-    content.style.display = 'none';
-  }
-  function pickPrinter(printer){
-    document.getElementById("selected-printer").textContent = "Selected Printer: " + printer;
-    exitPrinterContent();
-    // document.getElementById("printerForm").submit();
-  }
-</script>
+    }
+    function exitPrinterContent() {
+      var content = document.getElementById('printerControl');
+      content.style.display = 'none';
+    }
+    function pickPrinter(printer) {
+      document.getElementById("selected-printer").textContent = "Selected Printer: " + printer;
+      exitPrinterContent();
+      // document.getElementById("printerForm").submit();
+    }
+  </script>
 
 </body>
+
 </html>

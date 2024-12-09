@@ -233,21 +233,21 @@ aside a {
   /*padding-left: 20px;*/
 }
 
-/*.commandInformationBox{ !* without content*!*/
-/*  position: absolute;*/
-/*  top: 50%;*/
-/*  left: 50%;*/
-/*  transform: translate(-50%, -50%);*/
-/*  text-align: center;*/
-/*}*/
+.commandInformationBoxW{ /* without content*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  text-align: center;
+}
 
 .commandInformationBox{ /* with content*/
-   position: absolute;
-   top: 0;
-   left: 22px;
-   text-align: left;
+  position: absolute;
+  top: 0;
+  left: 22px;
+  text-align: left;
 
- }
+}
 
 .noMargin{
   margin-left: 6px !important;
@@ -305,11 +305,10 @@ aside a {
   display: inline-flex;
   /*top: 90px;*/
   left: 22px;
-  width: 90%;
+  width: 95%;
   height: 40px;
   margin-bottom: 15px;
 }
-
 
 .recentCommandTitle{
   position: absolute;
@@ -325,6 +324,7 @@ aside a {
 
 .recentCommandTagBoxName{
   color: black;
+  width: 300px;
 }
 
 .recentCommandTagBoxDate{
@@ -333,6 +333,8 @@ aside a {
 
 .recentCommandTagBoxInfo{
   margin-left: 22px;
+  width: 280px;
+  height: auto;
 }
 
 .tagRoundBox{
@@ -715,5 +717,44 @@ input[type="radio"] {
   left: 480px;
 }
 #propertyControl{
+  display: none;
+}
+
+.noSpinner::-webkit-inner-spin-button,
+.noSpinner::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.noSpinner {
+  -moz-appearance: textfield; /* Firefox */
+}
+
+.main-box {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 10px;
+  width: 550px;
+  height: 220px;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+.file-box {
+  background-color: #cccccc;
+  border-radius: 3px;
+  text-align: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#mainBoxFileList{
   display: none;
 }

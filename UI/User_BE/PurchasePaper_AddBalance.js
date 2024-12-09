@@ -9,12 +9,17 @@ document.addEventListener('DOMContentLoaded', () => {
   const amountToPayInput = paymentForm.querySelector('input[type="number"][name="amountToPay"]');
   const cancelButtonBalance = balanceForm.querySelector('button[onclick="exitBalanceContent()"]');
   const cancelButtonPayment = paymentForm.querySelector('button[onclick="exitPaymentContent()"]');
-  const dashboardBalance = document.querySelector('.statistic1 .statisticNumber');
+  const dashboardBalance = document.getElementById("balanceID");
+  const dashboardPaper = document.getElementById("paperID");
 
   // Set initial balance from localStorage or dashboard
   let currentBalance = parseFloat(localStorage.getItem('currentBalance')) || parseFloat(dashboardBalance.textContent) || 100;
+  let currentPaper = parseFloat(localStorage.getItem('dashboardPaper') || parseFloat(dashboardPaper.textContent));
   currentBalanceInputBalance.value = currentBalance;
   currentBalanceInputPayment.value = currentBalance;
+
+  dashboardBalance.textContent = currentBalance;
+  dashboardPaper.textContent = currentPaper;
 
   addPaperInput.addEventListener('input', () => {
     const addPaperAmount = parseFloat(addPaperInput.value);
@@ -48,8 +53,11 @@ document.addEventListener('DOMContentLoaded', () => {
       currentBalance -= amountToPay;
       currentBalanceInputBalance.value = currentBalance;
       currentBalanceInputPayment.value = currentBalance;
+      currentPaper += amountToPay;
       dashboardBalance.textContent = currentBalance;
+      dashboardPaper.textContent = currentPaper;
       localStorage.setItem('currentBalance', currentBalance);
+      localStorage.setItem('dashboardPaper', currentPaper);
       alert(`Paper purchased! Amount to pay: $${amountToPay}`);
       exitPaymentContent();
     } else {
@@ -66,6 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
     event.preventDefault(); // Prevent form submission
     exitPaymentContent();
   });
+
 });
 
 function exitBalanceContent() {

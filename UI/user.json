@@ -4,14 +4,56 @@
     "username": "student1",
     "password": "student123",
     "role": "user",
-    "commands": []
+    "commands": [
+      {
+        "id": 1,
+        "fileName": "file1.txt",
+        "numPage": 24,
+        "date": "12PM 10/10/2024",
+        "color": "With Color",
+        "side":"2 Sided",
+        "printerName": "Printer A",
+        "printerDirection": "304-A4"
+      },
+      {
+        "id": 2,
+        "fileName": "file2.txt",
+        "numPage": 20,
+        "date": "12PM 10/10/2024",
+        "color": "Without Color",
+        "side":"2 Sided",
+        "printerName": "Printer B",
+        "printerDirection": "201-A4"
+      }
+    ]
   },
   {
     "id": "student2",
     "username": "student2",
     "password": "student345",
     "role": "user",
-    "commands": []
+    "commands": [
+      {
+        "id": 1,
+        "fileName": "ASS2.pdf",
+        "numPage": 3,
+        "date": "12PM 10/10/2024",
+        "color": "With Color",
+        "side":"1 Sided",
+        "printerName": "Printer A",
+        "printerDirection": "502-A4"
+      },
+      {
+        "id": 2,
+        "fileName": "ASS1.word",
+        "numPage": 10,
+        "date": "12PM 10/10/2024",
+        "color": "Without Color",
+        "side":"1 Sided",
+        "printerName": "Printer B",
+        "printerDirection": "201-A4"
+      }
+    ]
   },
   {
     "id": "admin1",
@@ -20,7 +62,7 @@
     "role": "admin",
     "printers": [
       {
-        "id": "1",
+        "id": 1,
         "name": "Printer A",
         "currentPaper": 150,
         "maxPaper": 150,
@@ -29,13 +71,53 @@
         "direction": "304-B4"
       },
       {
-        "id": "2",
+        "id": 2,
         "name": "Printer B",
         "currentPaper": 100,
         "maxPaper": 100,
         "color": "Without Color",
         "side": "2 Sided",
         "direction": "201-A4"
+      }
+    ],
+    "currentPrinters": [
+      {
+        "id": 1,
+        "name": "Printer A",
+        "status": "Printing",
+        "currentPaper": 2,
+        "maxPaper": 10,
+        "direction": "304-B4"
+      },
+      {
+        "id": 2,
+        "name": "Printer B",
+        "status": "Done",
+        "currentPaper": 10,
+        "maxPaper": 10,
+        "direction": "201-A4"
+      }
+    ],
+    "notifications": [
+      {
+        "id": 1,
+        "printerName":"Printer A",
+        "status": "Out of ink"
+      },
+      {
+        "id": 2,
+        "printerName": "Printer B",
+        "status": "Out of paper"
+      },
+      {
+        "id": 3,
+        "printerName": "Printer A",
+        "status": "Out of ink"
+      },
+      {
+        "id": 4,
+        "printerName": "Printer B",
+        "status": "Out of paper"
       }
     ]
   },

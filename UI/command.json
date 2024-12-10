@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "fileName": "file1.txt",
+    "numPage": 24,
+    "date": "12PM 10/10/2024",
+    "color": "With Color",
+    "side": "2 Sided",
+    "studentName": "Nguyen Van A"
+  },
+  {
+    "id": 2,
+    "fileName": "file2.txt",
+    "numPage": 20,
+    "date": "12PM 10/10/2024",
+    "color": "Without Color",
+    "side": "2 Sided",
+    "studentName": "Tran Van B"
+  },
+  {
+    "id": 3,
+    "fileName": "ASS2.pdf",
+    "numPage": 3,
+    "date": "12PM 10/10/2024",
+    "color": "With Color",
+    "side": "1 Sided",
+    "studentName": "Nguyen Thi D"
+  },
+  {
+    "id": 4,
+    "fileName": "ASS1.word",
+    "numPage": 10,
+    "date": "12PM 10/10/2024",
+    "color": "Without Color",
+    "side": "1 Sided",
+    "studentName": "Cao Van G"
+  }
+]

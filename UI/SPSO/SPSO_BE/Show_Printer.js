@@ -1,7 +1,7 @@
 // Function to render printers
-function renderPrinters(printerData) {
+const renderPrinters = (printerData) => {
     const printerList = document.querySelector(".bottom-right-part").querySelector(".printer-list");
-    const noPrinter = document.querySelector(".no-printer");
+    const noPrinter = document.querySelector(".bottom-right-part").querySelector(".printer-list").querySelector(".no-printer");
 
     if (printerData.length == 0) {
         noPrinter.style.display = "block";
@@ -34,9 +34,20 @@ function renderPrinters(printerData) {
     }
 }
 
-function numberOfPrinter(printerLength) {
+const numberOfPrinter = (printerLength) => {
     const numberOfPrinter = document.querySelector(".number-of-printer");
     numberOfPrinter.textContent = printerLength;
+}
+
+const totalPaper = (printerData) => {
+    const totalPaper = document.querySelector(".total-paper");
+    let total = 0;
+
+    printerData.forEach(printer => {
+        total += printer.currentPaper;
+    });
+
+    totalPaper.textContent = total;
 }
 
 // Fetch JSON data from a file
@@ -65,6 +76,7 @@ fetch("/UI/user.json")
         if (user.printers && user.printers.length >= 0)  {
             renderPrinters(user.printers);
             numberOfPrinter(user.printers.length);
+            totalPaper(user.printers);
         }
     })
     .catch(error => {

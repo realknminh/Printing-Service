@@ -1,6 +1,6 @@
 [
   {
-    "id": "1",
+    "id": 1,
     "name": "Printer A",
     "currentPaper": 150,
     "maxPaper": 150,
@@ -9,7 +9,7 @@
     "direction": "304-B4"
   },
   {
-    "id": "2",
+    "id": 2,
     "name": "Printer B",
     "currentPaper": 100,
     "maxPaper": 100,

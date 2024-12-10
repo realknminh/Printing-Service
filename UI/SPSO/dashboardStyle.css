@@ -353,6 +353,12 @@ a .side-button:hover {
     overflow: auto;
 }
 
+.bottom-right-part .printer-list .no-printer {
+    text-align: center;
+    color: #646B74;
+    font-size: 18px;
+}
+
 .bottom-right-part .printer-list .printer-info {
     display: flex;
     justify-content: space-between;
@@ -409,11 +415,6 @@ a .side-button:hover {
     border-radius: 8px;
     padding: 5px;
     align-items: center;
-}
-
-.bottom-right-part .printer-list .printer-info .direction:hover {
-    cursor: pointer;
-    background-color: #dfedfc;
 }
 
 .bottom-right-part .printer-list .printer-info .direction i {

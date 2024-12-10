@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1",
+    "name": "Printer A",
+    "currentPaper": 150,
+    "maxPaper": 150,
+    "color": "With Color",
+    "side": "1 Sided",
+    "direction": "304-B4"
+  },
+  {
+    "id": "2",
+    "name": "Printer B",
+    "currentPaper": 100,
+    "maxPaper": 100,
+    "color": "Without Color",
+    "side": "2 Sided",
+    "direction": "201-A4"
+  }
+]

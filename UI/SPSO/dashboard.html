@@ -46,7 +46,7 @@
                 </button>
             </a>
             <a href="/UI/Login/login.html">
-                <button class="side-button" id="sign-out" onclick="setActiveSideBar('sign-out')">
+                <button class="side-button" id="sign-out" onclick="signout()">
                     <i class="side-bar-icon fa-solid fa-right-from-bracket" style="transform: rotate(180deg)"></i> 
                     Sign Out
                 </button>
@@ -62,7 +62,7 @@
                            <p>Number of Printers</p>
                             <i class="overall-icon fa-solid fa-print"></i>
                         </div>
-                        <p>6</p>
+                        <p class="number-of-printer"></p>
                     </div>
                     <div class="overall">
                         <div class="overall-title">
@@ -378,7 +378,71 @@
                 <div class="bottom-right-part">
                     <p class="br-header">Available Printers</p>
                     <div class="printer-list">
-                        <div class="printer-info">
+                        <p class="no-printer">There are no printer here!</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <!-- form for add printer -->
+    <div class="add-printer">
+        <div class="overlay"></div>
+        <div class="form-add">
+            <img src="https://hcmut.edu.vn/img/nhanDienThuongHieu/01_logobachkhoatoi.png" alt="logo-bk" class="logo">
+            <form action="" id="info">
+                <div class="name">
+                    <label for="printerName">Printer name:</label>
+                    <input type="text" id="printer-name" name="printerName" placeholder="Printer name" required>
+                </div>
+                <div class="num-paper">
+                    <label for="currentPaper">Current paper:</label>
+                    <input type="text" id="current-paper" name="currentPaper" placeholder="Current paper" required>
+                </div>
+                <div class="max">
+                    <label for="maxPaper">Max paper:</label>
+                    <input type="text" id="max-paper" name="maxPaper" placeholder="Max paper" required>
+                </div>
+                <div class="color">
+                    <label for="colorOption">Paper color:</label>
+                    <select id="colors" name="colorOption" form="info" required>
+                        <option value="with-color">With Color</option>
+                        <option value="without-color">Without Color</option>
+                    </select>
+                </div>
+                <div class="side">
+                    <label for="sideOption">Number of paper's side:</label>
+                    <select id="sides" name="sideOption" form="info" required>
+                        <option value="side-1">1 Sided</option>
+                        <option value="side-2">2 Sided</option>
+                    </select>
+                </div>
+                <div class="dir">
+                    <label for="directionOption">Direction:</label>
+                    <select id="directions" name="directionOption" form="info" required>
+                        <option value="304-B4">304-B4</option>
+                        <option value="105-C5">105-C5</option>
+                        <option value="201-A4">201-A4</option>
+                        <option value="503-A4">503-A4</option>
+                    </select>
+                </div>
+                <div class="container-btn-add">
+                    <button class="btn-add" type="submit">Add</button>
+                    <button class="btn-cancel" type="button" onclick="closeModelAdd()">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="dashboardScript.js"></script>
+    <script src="/UI/Signout.js"></script>
+    <script src="/UI/SPSO/SPSO_BE/Show_Printer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="lineChart.js"></script>
+</body>
+
+</html>
+
+
+<!-- <div class="printer-info">
                             <div class="printer-name">
                                 <p>Printer A</p>
                                 <p><span>2</span>/150</p>
@@ -490,62 +554,4 @@
                                 <i class="fa-solid fa-location-dot"></i>
                             </button>
                         </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </div>
-    <!-- form for add printer -->
-    <div class="add-printer">
-        <div class="overlay"></div>
-        <div class="form-add">
-            <img src="https://hcmut.edu.vn/img/nhanDienThuongHieu/01_logobachkhoatoi.png" alt="logo-bk" class="logo">
-            <form action="" id="info">
-                <div class="name">
-                    <label for="printerName">Printer name:</label>
-                    <input type="text" id="printer-name" name="printerName" placeholder="Printer name" required>
-                </div>
-                <div class="num-paper">
-                    <label for="currentPaper">Current paper:</label>
-                    <input type="text" id="current-paper" name="currentPaper" placeholder="Current paper" required>
-                </div>
-                <div class="max">
-                    <label for="maxPaper">Max paper:</label>
-                    <input type="text" id="max-paper" name="maxPaper" placeholder="Max paper" required>
-                </div>
-                <div class="color">
-                    <label for="colorOption">Paper color:</label>
-                    <select id="colors" name="colorOption" form="info" required>
-                        <option value="with-color">With Color</option>
-                        <option value="without-color">Without Color</option>
-                    </select>
-                </div>
-                <div class="side">
-                    <label for="sideOption">Number of paper's side:</label>
-                    <select id="sides" name="sideOption" form="info" required>
-                        <option value="side-1">1 Sided</option>
-                        <option value="side-2">2 Sided</option>
-                    </select>
-                </div>
-                <div class="dir">
-                    <label for="directionOption">Direction:</label>
-                    <select id="directions" name="directionOption" form="info" required>
-                        <option value="304-B4">304-B4</option>
-                        <option value="105-C5">105-C5</option>
-                        <option value="201-A4">201-A4</option>
-                        <option value="503-A4">503-A4</option>
-                    </select>
-                </div>
-                <div class="container-btn-add">
-                    <button class="btn-add" type="submit">Add</button>
-                    <button class="btn-cancel" type="button" onclick="closeModelAdd()">Cancel</button>
-                </div>
-            </form>
-        </div>
-    </div>
-    <script src="dashboardScript.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="lineChart.js"></script>
-</body>
-
-</html>
+                    </div> -->

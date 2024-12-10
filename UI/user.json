@@ -1,0 +1,49 @@
+[
+  {
+    "id": "student1",
+    "username": "student1",
+    "password": "student123",
+    "role": "user",
+    "commands": []
+  },
+  {
+    "id": "student2",
+    "username": "student2",
+    "password": "student345",
+    "role": "user",
+    "commands": []
+  },
+  {
+    "id": "admin1",
+    "username": "admin1",
+    "password": "admin123",
+    "role": "admin",
+    "printers": [
+      {
+        "id": "1",
+        "name": "Printer A",
+        "currentPaper": 150,
+        "maxPaper": 150,
+        "color": "With Color",
+        "side": "1 Sided",
+        "direction": "304-B4"
+      },
+      {
+        "id": "2",
+        "name": "Printer B",
+        "currentPaper": 100,
+        "maxPaper": 100,
+        "color": "Without Color",
+        "side": "2 Sided",
+        "direction": "201-A4"
+      }
+    ]
+  },
+  {
+    "id": "admin2",
+    "username": "admin2",
+    "password": "admin345",
+    "role": "admin",
+    "printers": []
+  }
+]

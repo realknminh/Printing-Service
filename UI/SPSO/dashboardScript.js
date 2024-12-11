@@ -21,6 +21,7 @@ const closeModelAdd = () => {
     const form = document.querySelector(".add-printer");
     form.style.display = "none";
     form.reset();
+    window.location.reload(true);
 }
 
 const validateForm = (event) => {
@@ -37,4 +38,39 @@ const validateForm = (event) => {
     // If the form is valid, close the modal
     closeModelAdd();
     return true;
+};
+
+const savePrinterData = (event) => {
+    event.preventDefault();
+
+    const printerName = document.getElementById('printer-name').value;
+    const currentPaper = document.getElementById('current-paper').value;
+    const maxPaper = document.getElementById('max-paper').value;
+    const color = document.getElementById('colors').value === 'with-color' ? 'With Color' : 'Without Color';
+    const side = document.getElementById('sides').value === 'side-1' ? '1 Sided' : '2 Sided';
+    const direction = document.getElementById('directions').value;
+
+    const newPrinter = {
+        id: Date.now(),
+        name: printerName,
+        currentPaper: parseInt(currentPaper),
+        maxPaper: parseInt(maxPaper),
+        color: color,
+        side: side,
+        direction: direction
+    };
+
+    console.log('New Printer:', newPrinter);
+
+    const printers = JSON.parse(localStorage.getItem('printers')) || [];
+    printers.push(newPrinter);
+    localStorage.setItem('printers', JSON.stringify(printers));
+
+    console.log('Updated Printers:', printers);
+
+    closeModelAdd();
+    renderPrinters(printers);
+    renderCurrentPrinter(printers);
+    event.target.reset();
+    location.reload();
 };

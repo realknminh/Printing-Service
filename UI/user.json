@@ -78,6 +78,15 @@
         "color": "Without Color",
         "side": "2 Sided",
         "direction": "201-A4"
+      },
+      {
+        "id": 3,
+        "name": "Printer C",
+        "currentPaper": 50,
+        "maxPaper": 100,
+        "color": "With Color",
+        "side": "1 Sided",
+        "direction": "502-A4"
       }
     ],
     "currentPrinters": [

@@ -1,4 +1,5 @@
 const renderCurrentPrinter = (currentPrinterData) => {
+    console.log('Rendering Current Printers:', currentPrinterData);
     const currentPrinterList = document.querySelector(".middle-right-part").querySelector(".printer-list");
     const noCurrentPrinter = document.querySelector(".middle-right-part").querySelector(".printer-list").querySelector(".no-current-printer");
 
@@ -32,33 +33,7 @@ const renderCurrentPrinter = (currentPrinterData) => {
     }
 }
 
-// Fetch JSON data from a file
-fetch("/UI/user.json")
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok ' + response.statusText);
-        }
-        return response.json();
-    })
-    .then(data => {
-        const loggedInUser = JSON.parse(sessionStorage.getItem("loggedInUser"));
-
-        if (!loggedInUser) {
-            window.location.href = "/UI/Login/login.html";
-            return;
-        }
-
-        const user = data.find(user => user.id === loggedInUser.id);
-
-        if (!user) {
-            window.location.href = "/UI/Login/login.html";
-            return;
-        }
-
-        if (user.currentPrinters && user.currentPrinters.length >= 0)  {
-            renderCurrentPrinter(user.currentPrinters);
-        }
-    })
-    .catch(error => {
-        console.error('There has been a problem with your fetch operation:', error);
-    });
+document.addEventListener('DOMContentLoaded', () => {
+    const printers = JSON.parse(localStorage.getItem('printers')) || [];
+    renderCurrentPrinter(printers);
+});

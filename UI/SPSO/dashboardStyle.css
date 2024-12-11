@@ -9,7 +9,7 @@
 body{
     margin: 0;
     max-height: 1200px;
-    overflow: hidden;
+    /*overflow: hidden;*/
   }
 
 .navbar {

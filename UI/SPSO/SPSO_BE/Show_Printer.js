@@ -1,5 +1,6 @@
 // Function to render printers
 const renderPrinters = (printerData) => {
+    console.log('Rendering Printers:', printerData);
     const printerList = document.querySelector(".bottom-right-part").querySelector(".printer-list");
     const noPrinter = document.querySelector(".bottom-right-part").querySelector(".printer-list").querySelector(".no-printer");
 
@@ -50,35 +51,9 @@ const totalPaper = (printerData) => {
     totalPaper.textContent = total;
 }
 
-// Fetch JSON data from a file
-fetch("/UI/user.json")
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok ' + response.statusText);
-        }
-        return response.json();
-    })
-    .then(data => {
-        const loggedInUser = JSON.parse(sessionStorage.getItem("loggedInUser"));
-
-        if (!loggedInUser) {
-            window.location.href = "/UI/Login/login.html";
-            return;
-        }
-
-        const user = data.find(user => user.id === loggedInUser.id);
-
-        if (!user) {
-            window.location.href = "/UI/Login/login.html";
-            return;
-        }
-
-        if (user.printers && user.printers.length >= 0)  {
-            renderPrinters(user.printers);
-            numberOfPrinter(user.printers.length);
-            totalPaper(user.printers);
-        }
-    })
-    .catch(error => {
-        console.error('There has been a problem with your fetch operation:', error);
-    });
+document.addEventListener('DOMContentLoaded', () => {
+    const printers = JSON.parse(localStorage.getItem('printers')) || [];
+    renderPrinters(printers);
+    numberOfPrinter(printers.length);
+    totalPaper(printers);
+});

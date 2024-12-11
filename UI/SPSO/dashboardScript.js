@@ -20,7 +20,6 @@ const openModelAdd = () => {
 const closeModelAdd = () => {
     const form = document.querySelector(".add-printer");
     form.style.display = "none";
-    form.reset();
     window.location.reload(true);
 }
 
@@ -68,9 +67,6 @@ const savePrinterData = (event) => {
 
     console.log('Updated Printers:', printers);
 
-    closeModelAdd();
     renderPrinters(printers);
     renderCurrentPrinter(printers);
-    event.target.reset();
-    location.reload();
 };

@@ -1,5 +1,3 @@
-document.querySelector('.button-add-printer').addEventListener('click', openModelAdd);
-document.querySelector('.btn-cancel').addEventListener('click', closeModelAdd);
 document.querySelector('.form-add').addEventListener('submit', addPrinter);
 
 function openModelAdd() {

@@ -21,6 +21,11 @@
 
 
 document.addEventListener('DOMContentLoaded', () => {
+  // localStorage.clear();
+
+  const dashboardCommand = document.getElementById("totalCommand");
+  let currentCommand = parseFloat(localStorage.getItem('totalCommand') || parseFloat(dashboardCommand.textContent));
+  dashboardCommand.textContent = currentCommand.toString();
 
   const fileUploader = document.getElementById('uploadFile');
   const filePreview = document.getElementById('filePreview');
@@ -147,8 +152,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     for (const file of formData['uploadFile']) {
-      let currentPaper = parseFloat(localStorage.getItem('dashboardPaper'));
       const dashboardPaper = document.getElementById("paperID");
+      let currentPaper = parseFloat(localStorage.getItem('dashboardPaper')) || parseFloat(dashboardPaper.textContent);
 
       const commandHTML = `
     <div class="CommandTagBox">
@@ -169,15 +174,21 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="tagRoundBox ${sideClass} noMargin smallSize">${sideTag.textContent}</div>
     </div>
   `;
-
+      console.log("dsaf");
       if(currentPaper < 20){
-        alert("Not enough paper");
+        alert("Not enough paper!!");
         break;
       }
 
       currentPaper -= 20; // so trang mac dinh
-      dashboardPaper.textContent = currentPaper;
-      localStorage.setItem('dashboardPaper', currentPaper);
+      dashboardPaper.textContent = currentPaper.toString();
+      localStorage.setItem('dashboardPaper', currentPaper.toString());
+
+      currentCommand += 1;
+      dashboardCommand.textContent = currentCommand.toString();
+      localStorage.setItem('totalCommand', currentCommand.toString());
+
+
 
       // Thêm HTML vào danh sách
       const commandList = document.getElementById('currentSubmitForm');

@@ -14,12 +14,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Set initial balance from localStorage or dashboard
   let currentBalance = parseFloat(localStorage.getItem('currentBalance')) || parseFloat(dashboardBalance.textContent) || 100;
-  let currentPaper = parseFloat(localStorage.getItem('dashboardPaper') || parseFloat(dashboardPaper.textContent));
+  let currentPaper = parseFloat(localStorage.getItem('dashboardPaper')) || parseFloat(dashboardBalance.textContent) ;
   currentBalanceInputBalance.value = currentBalance;
   currentBalanceInputPayment.value = currentBalance;
 
-  dashboardBalance.textContent = currentBalance;
-  dashboardPaper.textContent = currentPaper;
+  dashboardBalance.textContent = currentBalance.toString();
+  dashboardPaper.textContent = currentPaper.toString();
 
   addPaperInput.addEventListener('input', () => {
     const addPaperAmount = parseFloat(addPaperInput.value);

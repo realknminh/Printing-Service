@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Set initial balance from localStorage or dashboard
   let currentBalance = parseFloat(localStorage.getItem('currentBalance')) || parseFloat(dashboardBalance.textContent) || 100;
-  let currentPaper = parseFloat(localStorage.getItem('dashboardPaper')) || parseFloat(dashboardBalance.textContent) ;
+  let currentPaper = parseFloat(localStorage.getItem('dashboardPaper')) || parseFloat(dashboardPaper.textContent) ;
   currentBalanceInputBalance.value = currentBalance;
   currentBalanceInputPayment.value = currentBalance;
 

@@ -154,7 +154,6 @@ document.addEventListener('DOMContentLoaded', () => {
     for (const file of formData['uploadFile']) {
       const dashboardPaper = document.getElementById("paperID");
       let currentPaper = parseFloat(localStorage.getItem('dashboardPaper')) || parseFloat(dashboardPaper.textContent);
-
       const commandHTML = `
     <div class="CommandTagBox">
       <i class="fa-regular fa-file-lines" style="font-size: 16px;"></i>
